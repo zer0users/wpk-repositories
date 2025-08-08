@@ -1,0 +1,6 @@
+print('Building package..')
+import os
+os.system("gcc -Wall -Wextra -std=c99 $(pkg-config --cflags gtk+-3.0 vte-2.91) -o water water.c $(pkg-config --libs gtk+-3.0 vte-2.91)")
+print('We need sudo permissions to install please!')
+os.system("sudo mv water /usr/bin/water")
+print('Installation done.')
